@@ -1364,7 +1364,6 @@ void BSP_ExtensionPort_SpiTxIsr(void)
 //        retVal = RETCODE(RETCODE_SEVERITY_ERROR, RETCODE_NULL_POINTER);
 //        Retcode_RaiseErrorFromIsr(retVal);
 //    }
-	printf("TX\r\n");
     Retcode_T retVal = RETCODE_OK;
     if ((NULL != Bsp_ExtensionPortUart2TxIsrCallback) && (NULL != Bsp_ExtensionPortUart2Handle))
     {
