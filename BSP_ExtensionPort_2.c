@@ -1784,7 +1784,7 @@ Retcode_T BSP_ExtensionPort_EnableUart(bool nr1)
             Bsp_ExtensionPortUart2RxIsrCallback = Bsp_ExtensionPortUart2Handle->IrqRxCallback;
             Bsp_ExtensionPortUart2TxIsrCallback = Bsp_ExtensionPortUart2Handle->IrqTxCallback;
 
-            (Bsp_ExtensionPortUart2Handle->Uart_ptr)->ROUTE = UART_ROUTE_RXPEN | UART_ROUTE_TXPEN | UART_ROUTE_LOCATION_LOC2;
+            (Bsp_ExtensionPortUart2Handle->Uart_ptr)->ROUTE = USART_ROUTE_RXPEN | USART_ROUTE_TXPEN | USART_ROUTE_LOCATION_LOC2;
             NVIC_SetPriority(USART2_RX_IRQn, EXTENSIONPORT_SPI_RX_INT_PRIORITY);
             NVIC_SetPriority(USART2_TX_IRQn, EXTENSIONPORT_SPI_TX_INT_PRIORITY);
 
